@@ -8,7 +8,6 @@ import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
 export class TaskRepository extends Repository<Task> {
   async getTasks(filterDto: GetTasksFilterDto): Promise<Task[]> {
     const { status, search } = filterDto;
-    console.log(status, search);
     const query = this.createQueryBuilder('task');
 
     if (status) {
