@@ -1,0 +1,86 @@
+### Sign In
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "username": "jenghis",
+  "password": "BigPassword732"
+}
+
+<> 2021-01-15T152646.201.json
+<> 2021-01-15T152501.201.json
+<> 2021-01-15T135455.201.json
+<> 2021-01-15T121143.401.json
+<> 2021-01-15T121133.401.json
+
+
+### Sign Up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "username": "jenghis",
+  "password": "BigPassword732"
+}
+
+<> 2021-01-15T135449.409.json
+
+
+### Delete Task
+DELETE http://localhost:3000/tasks/4
+
+<> 2021-01-15T144245.404.json
+
+
+### Create Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Call mom",
+  "description": "tell her we love her"
+}
+
+
+### Get All Tasks
+GET http://localhost:3000/taasks/2
+Accept: application/json
+
+
+### Get Filtered Tasks
+GET http://localhost:3000/tasks?status=IN_PROGRESS&search=chain
+
+
+### Post Task (test)
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "test title",
+  "description": "test description"
+}
+
+
+### Edit Task
+PATCH http://localhost:3000/tasks/5/status
+Content-Type: application/json
+
+{
+  "status": "IN_PROGRESS"
+}
+
+### Token Test
+POST http://localhost:3000/auth/test
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplbmdoaXMiLCJpYXQiOjE2MTA3NTMyMDYsImV4cCI6MTYxMDc1NjgwNn0.LBWaXT-Wc43rVEW0F2AXKZ_4VjP8dpBj0XI95tAQJUk
+
+{
+
+}
+
+<> 2021-01-15T152727.401.json
+<> 2021-01-15T152613.401.json
+
+
+
+
