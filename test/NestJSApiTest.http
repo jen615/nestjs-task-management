@@ -3,8 +3,8 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-  "username": "jenghis",
-  "password": "BigPassword732"
+  "username": "{{user}}",
+  "password": "{{password}}"
 }
 
 <> 2021-01-15T152646.201.json
@@ -19,8 +19,8 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "username": "jenghis",
-  "password": "BigPassword732"
+  "username": "{{user}}",
+  "password": "{{password}}"
 }
 
 <> 2021-01-15T135449.409.json
@@ -35,18 +35,18 @@ DELETE http://localhost:3000/tasks/4
 ### Create Task
 POST http://localhost:3000/tasks
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplbmdoaXMiLCJpYXQiOjE2MTEyNTEyNTIsImV4cCI6MTYxMTI1NDg1Mn0.Xxck-UBhfp5_d1L0hF2q6G4njG9R093dX3uqGkDOPXY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNodW5ndXMiLCJpYXQiOjE2MTEyNjE4NTUsImV4cCI6MTYxMTI2NTQ1NX0.f0gweiZx5x5UOdm2QjdWGZFyW708mOzJGaKMGJEZJlo
 
 {
-  "title": "Call mom",
-  "description": "tell her we love her"
+  "title": "chungle test 2",
+  "description": "yet again"
 }
 
 
 ### Get All Tasks
 GET http://localhost:3000/tasks/
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplbmdoaXMiLCJpYXQiOjE2MTEyNTEyNTIsImV4cCI6MTYxMTI1NDg1Mn0.Xxck-UBhfp5_d1L0hF2q6G4njG9R093dX3uqGkDOPXY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplbmdoaXMiLCJpYXQiOjE2MTEyNjM0NjgsImV4cCI6MTYxMTI2NzA2OH0.pOLuC1ps4pJbhE3VVN9EZFPFoxaA7aYsOcjsZ79Cu_M
 
 
 ### Get Filtered Tasks
