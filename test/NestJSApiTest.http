@@ -51,7 +51,8 @@ Authorization: Bearer {{token}}
 
 
 ### Get Filtered Tasks
-GET http://localhost:3000/tasks?status=IN_PROGRESS&search=chain
+GET http://localhost:3000/tasks?status=IN_PROGRESS
+Authorization: Bearer {{token}}
 
 
 ### Post Task (test)
