@@ -27,7 +27,8 @@ Content-Type: application/json
 
 
 ### Delete Task
-DELETE http://localhost:3000/tasks/4
+DELETE http://localhost:3000/tasks/5
+Authorization: Bearer {{token}}
 
 <> 2021-01-15T144245.404.json
 
@@ -35,7 +36,7 @@ DELETE http://localhost:3000/tasks/4
 ### Create Task
 POST http://localhost:3000/tasks
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNodW5ndXMiLCJpYXQiOjE2MTEyNjE4NTUsImV4cCI6MTYxMTI2NTQ1NX0.f0gweiZx5x5UOdm2QjdWGZFyW708mOzJGaKMGJEZJlo
+Authorization: Bearer {{token}}
 
 {
   "title": "chungle test 2",
@@ -46,7 +47,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNod
 ### Get All Tasks
 GET http://localhost:3000/tasks/
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplbmdoaXMiLCJpYXQiOjE2MTEyNjM0NjgsImV4cCI6MTYxMTI2NzA2OH0.pOLuC1ps4pJbhE3VVN9EZFPFoxaA7aYsOcjsZ79Cu_M
+Authorization: Bearer {{token}}
 
 
 ### Get Filtered Tasks
@@ -56,7 +57,7 @@ GET http://localhost:3000/tasks?status=IN_PROGRESS&search=chain
 ### Post Task (test)
 POST http://localhost:3000/tasks
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplbmdoaXMiLCJpYXQiOjE2MTEyNTEyNTIsImV4cCI6MTYxMTI1NDg1Mn0.Xxck-UBhfp5_d1L0hF2q6G4njG9R093dX3uqGkDOPXY
+Authorization: Bearer {{token}}
 
 {
   "title": "test title",
@@ -65,24 +66,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Implb
 
 
 ### Edit Task
-PATCH http://localhost:3000/tasks/1/status
+PATCH http://localhost:3000/tasks/4/status
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "status": "IN_PROGRESS"
 }
-
-### Token Test
-POST http://localhost:3000/auth/test
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplbmdoaXMiLCJpYXQiOjE2MTEyNTEyNTIsImV4cCI6MTYxMTI1NDg1Mn0.Xxck-UBhfp5_d1L0hF2q6G4njG9R093dX3uqGkDOPXY
-
-{
-
-}
-
-<> 2021-01-15T152727.401.json
-<> 2021-01-15T152613.401.json
 
 
 
